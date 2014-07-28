@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>mdlima.codebase-workflow</string>
+	<key>connections</key>
+	<dict>
+		<key>3CB32824-3DBB-4313-80E3-80E92BBFA46A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F27C52ED-AB1C-4966-9A2C-AB9E91617110</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Marcio Lima</string>
+	<key>description</key>
+	<string>Search Codebase tickets</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Codebase</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<true/>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>F27C52ED-AB1C-4966-9A2C-AB9E91617110</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>cbt</string>
+				<key>runningsubtext</key>
+				<string>Connecting to Codebase...</string>
+				<key>script</key>
+				<string>export CB_ACCOUNT_USER=&quot;YOUR_ACCOUNT_USER&quot;
+				export CB_API_KEY=&quot;YOUR_API_KEY&quot;
+				export CB_DEFAULT_PROJECT=&quot;YOUR_DEFAULT_PROJECT&quot;
+				
+				/usr/bin/ruby ./codebase_tickets.rb {query}</string>
+				<key>subtext</key>
+				<string>Enter ticket number</string>
+				<key>title</key>
+				<string>Codebase tickets</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3CB32824-3DBB-4313-80E3-80E92BBFA46A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>See your latest tickets in Codebase.
+	cbt -&gt; list the latest tickets (limited by Codebase API).
+	cbt &lt;query&gt; -&gt; search Codebase tickets.
+	
+	Dont forget to change your user account and API key in the workflow.
+	
+	Workflow based on alfred2-ruby-template (https://github.com/zhaocai/alfred2-ruby-template)
+	</string>
+	<key>uidata</key>
+	<dict>
+		<key>3CB32824-3DBB-4313-80E3-80E92BBFA46A</key>
+		<dict>
+			<key>ypos</key>
+			<real>100.0</real>
+		</dict>
+		<key>F27C52ED-AB1C-4966-9A2C-AB9E91617110</key>
+		<dict>
+			<key>ypos</key>
+			<real>100.0</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://github.com/mdlima/codebase-workflow</string>
+</dict>
+</plist>

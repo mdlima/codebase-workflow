@@ -1,0 +1,5 @@
+source "https://rubygems.org"
+
+gem "plist"
+gem "alfred-workflow"
+gem "codebase_api", :github => "mdlima/codebase-api", :branch => "master"

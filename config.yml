@@ -1,0 +1,29 @@
+## workflow build config
+
+# id and name for the workflow (bundle id = domain.id)
+id: codebase-workflow
+
+# base domain
+domain: mdlima
+
+name: Codebase
+description: Search Codebase tickets
+created_by: Marcio Lima
+website: https://github.com/mdlima/codebase-workflow
+readme: |
+  See your latest tickets in Codebase.
+  cbt -> list the latest tickets (limited by Codebase API).
+  cbt <query> -> search Codebase tickets.
+  
+  Dont forget to change your user account and API key in the workflow.
+  
+  Workflow based on alfred2-ruby-template (https://github.com/zhaocai/alfred2-ruby-template)
+
+## development config
+
+# path is the relative path to the workflow in the project root
+path: workflow
+
+# If you are using Alfred's advanced Dropbox sync, indicate the path shown in
+# Alfred Preferences > Advanced > Syncing:
+dropbox: ~/Dropbox/Alfred
